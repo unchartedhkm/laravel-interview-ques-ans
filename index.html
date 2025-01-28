@@ -3,10 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML Page</title>
+    <title>Futuristic Laravel 10 Interview Questions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 50px;
+            letter-spacing: 2px;
+            transition: opacity 0.5s;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .question-list {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.1rem;
+        }
+
+        .question-list li {
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .question-list li:hover {
+            transform: translateY(-5px);
+        }
+
+        .answer {
+            display: none;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #bbb;
+            padding-left: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .answer.show {
+            display: block;
+            opacity: 1;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Simple HTML Page!</h1>
-    <p>This is a simple HTML page that is hosted successfully.</p>
+    <h1>Welcome to the Futuristic Laravel 10 Interview Questions</h1>
+    <p>This page provides dynamic questions and answers about Laravel 10, with smooth interactivity.</p>
+
+    <div class="content">
+        <h2>Laravel 10 Interview Questions:</h2>
+        <ul class="question-list">
+            <li onclick="toggleAnswer('answer1')">What are the key new features in Laravel 10?</li>
+            <div id="answer1" class="answer">
+                Laravel 10 introduces improved job batching, a new query builder interface, and enhanced query optimization tools.
+            </div>
+
+            <li onclick="toggleAnswer('answer2')">Can you explain the service container in Laravel and how it works?</li>
+            <div id="answer2" class="answer">
+                The service container in Laravel is a powerful tool for dependency injection, making it easier to manage class dependencies and perform dependency resolution.
+            </div>
+
+            <li onclick="toggleAnswer('answer3')">What are the main differences between Laravel 9 and Laravel 10?</li>
+            <div id="answer3" class="answer">
+                Laravel 10 offers better performance improvements, new query features, and added functionalities in the job batching and queue systems.
+            </div>
+
+            <li onclick="toggleAnswer('answer4')">How does Laravel handle database migrations, and how do you create a migration?</li>
+            <div id="answer4" class="answer">
+                Laravel migrations are used to manage your database schema. You can create migrations with `php artisan make:migration` and run them with `php artisan migrate`.
+            </div>
+
+            <li onclick="toggleAnswer('answer5')">Explain the concept of "Service Providers" in Laravel.</li>
+            <div id="answer5" class="answer">
+                Service providers are the central place to configure your application services and bind classes into the service container in Laravel.
+            </div>
+
+            <li onclick="toggleAnswer('answer6')">What is Laravel Eloquent ORM, and how does it help with database queries?</li>
+            <div id="answer6" class="answer">
+                Eloquent is Laravel’s Object-Relational Mapping (ORM) system, which simplifies database interactions and provides an active record implementation for your models.
+            </div>
+
+            <li onclick="toggleAnswer('answer7')">What is the role of middleware in Laravel, and can you create custom middleware?</li>
+            <div id="answer7" class="answer">
+                Middleware filters HTTP requests entering your application. Yes, you can create custom middleware using `php artisan make:middleware`.
+            </div>
+
+            <li onclick="toggleAnswer('answer8')">Can you explain Laravel’s job queue system?</li>
+            <div id="answer8" class="answer">
+                Laravel’s job queue system allows deferred execution of time-consuming tasks, such as sending emails or processing files.
+            </div>
+
+            <li onclick="toggleAnswer('answer9')">What are route groups, and how can they help organize routes in Laravel?</li>
+            <div id="answer9" class="answer">
+                Route groups allow you to group routes that share common attributes, such as middleware or namespace, helping to keep your routes organized.
+            </div>
+
+            <li onclick="toggleAnswer('answer10')">How does Laravel's Blade templating engine work?</li>
+            <div id="answer10" class="answer">
+                Blade allows you to create dynamic views in Laravel. It provides a simple yet powerful syntax to define loops, conditionals, and template inheritance.
+            </div>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Prepared for Laravel Developers. Page created with love and a touch of futurism.</p>
+    </footer>
+
+    <script>
+        function toggleAnswer(answerId) {
+            const answerElement = document.getElementById(answerId);
+            answerElement.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
